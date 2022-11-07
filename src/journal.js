@@ -1,5 +1,5 @@
 
-function Entry(inputText) {
+export default function Entry(inputText) {
   this.inputText = inputText;
 }
 

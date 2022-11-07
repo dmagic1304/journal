@@ -1,3 +1,9 @@
+import Entry from './journal.js';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/styles.css';
+
+
 function handleJournalEntry() {
   event.preventDefault();
   document.querySelector('#response').innerText = null;
@@ -9,6 +15,5 @@ function handleJournalEntry() {
   document.querySelector('#response').append(pTag);
 }
 
-window.addEventListener("load", function() {
-  document.querySelector("#journal-entry-form").addEventListener("submit", handleJournalEntry);
-});
+
+document.querySelector("#journal-entry-form").addEventListener("submit", handleJournalEntry);
