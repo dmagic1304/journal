@@ -4,12 +4,18 @@
   <title>Journal</title>
 </head>
 <body>
-  <h3>Write a journal entry.</h3>
-  <form id="journal-entry-form">
-    <label for="entry-text">Enter a number:</label>
-    <input id="entry-text" type="text">
-    <button type="submit">Submit</button>
-  </form>
-  <div id="response"></div>
+  <div class="container">
+    <h3>Write a journal entry.</h3>
+    <form id="journal-entry-form">
+      <div class="mb-3">
+        <label for="entry-text" class="form-label">What's on your mind?</label>
+        <textarea class="form-control" id="entry-text" rows="3"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="response"></div>
+    <div id="consonants"></div>
+    <div id="vowels"></div>
+  </div>
 </body>
 </html>

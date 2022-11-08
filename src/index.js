@@ -7,12 +7,20 @@ import './css/styles.css';
 function handleJournalEntry() {
   event.preventDefault();
   document.querySelector('#response').innerText = null;
-  const inputText = parseInt(document.querySelector('#entry-text').value);
+  const inputText = document.querySelector('#entry-text').value;
   const entry = new Entry(inputText);
   const response = entry.wordCount();
+  const vowels = entry.vowelCount();
+  const consonants = entry.consonantCount();
   const pTag = document.createElement("p");
-  pTag.append(response);
+  const pTagVowels = document.createElement('p');
+  const pTagConsonants = document.createElement('p');
+  pTag.append("Wordcount: " + response);
+  pTagVowels.append("Vowelcount: " + vowels);
+  pTagConsonants.append("Consonantscount: " + consonants);
   document.querySelector('#response').append(pTag);
+  document.querySelector('#vowels').append(pTagVowels);
+  document.querySelector('#consonants').append(pTagConsonants);
 }
 
 
